@@ -13,4 +13,5 @@ COPY --chown=1001:0 --from=build /tmp/src/src/main/liberty/config/ /config/
 COPY --chown=1001:0 --from=build /tmp/src/target/*.war /config/apps/
 
 RUN ls -al /config/ && ls -al /config/apps/ && cat /config/server.xml
-RUN export VERBOSE=true && configure.sh
+# RUN export VERBOSE=true && configure.sh
+RUN configure.sh
