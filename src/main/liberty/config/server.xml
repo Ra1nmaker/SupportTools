@@ -17,5 +17,11 @@
                   httpsPort="${https.port}"/>
 
     <application location="SupportTools.war"/>
+    
+    <!-- tag::logging[] -->
+    <logging traceSpecification="com.ibm.ws.microprofile.health.*=all" />
+    
+    <!-- end::webApplication[] -->    
+    <mpMetrics authentication="false"/>
 
 </server>
